@@ -1,0 +1,1116 @@
+{
+  "$schema": "./schemas/trip-data.schema.json",
+  "schemaVersion": "2.0-lite",
+  "config": {
+    "schemaVersion": "1.0.0",
+    "modules": {
+      "flights": true,
+      "overview": true,
+      "itinerary": true,
+      "driving": false,
+      "todo": true,
+      "ledger": true
+    },
+    "language": "zh-CN",
+    "persistence": {
+      "mode": "local"
+    }
+  },
+  "metadata": {
+    "tripId": "zurich-20261029-20261101",
+    "title": "Zurich & Grindelwald · 4 Days / 3 Nights",
+    "language": "zh-CN",
+    "timeZone": "Europe/Zurich",
+    "assets": {
+      "routeMaps": [
+        "assets/maps/templates/template-04-urban.webp"
+      ]
+    }
+  },
+  "trip": {
+    "status": "draft",
+    "startDate": "2026-10-29",
+    "endDate": "2026-11-01",
+    "dayCount": 4,
+    "nightCountAway": 3,
+    "countries": [
+      {
+        "code": "CH",
+        "name": "Switzerland",
+        "nameZh": "瑞士",
+        "nameEn": "SWITZERLAND"
+      }
+    ],
+    "primaryDestinationCountries": [
+      "CH"
+    ],
+    "primaryDestinationName": "Zurich & Jungfrau Region",
+    "primaryDestinationNameEn": "ZURICH & JUNGFRAU REGION",
+    "citiesAndAreas": [
+      "Zurich",
+      "Grindelwald",
+      "Jungfraujoch",
+      "Pfingstegg"
+    ],
+    "routeSummary": "Zurich · Grindelwald · Jungfraujoch · Pfingstegg",
+    "groupSize": 1
+  },
+  "flightJourneys": [
+    {
+      "id": "outbound",
+      "title": "去程｜GLA → AMS → ZRH｜KL940 · KL1925｜13:45–18:25（航段时间待确认）",
+      "traveller": "主行程",
+      "status": "pending",
+      "placeholder": true,
+      "missingFields": [
+        "各航段起飞时间",
+        "各航段抵达时间"
+      ]
+    },
+    {
+      "id": "return",
+      "title": "回程｜ZRH → AMS → GLA｜KL1926 · KL945｜19:10–22:10（航段时间待确认）",
+      "traveller": "主行程",
+      "status": "pending",
+      "placeholder": true,
+      "missingFields": [
+        "各航段起飞时间",
+        "各航段抵达时间"
+      ]
+    }
+  ],
+  "flights": [],
+  "accommodations": [
+    {
+      "id": "adagio-zurich-city-centre",
+      "name": "Aparthotel Adagio Zurich City Centre",
+      "nights": 2,
+      "notes": [
+        "入住夜：第 1 夜（29 Oct）与第 3 夜（31 Oct）",
+        "住宿总价：HK$2,202.29（两处住宿合计）"
+      ]
+    },
+    {
+      "id": "eiger-view-alpine-lodge",
+      "name": "Eiger View Alpine Lodge",
+      "nights": 1,
+      "notes": [
+        "入住夜：第 2 夜（30 Oct）",
+        "地址：Sonnenbergweg 20, 3818 Grindelwald"
+      ]
+    }
+  ],
+  "groundTransport": {
+    "rentalCar": null,
+    "rentalChecklist": [],
+    "drivingNotes": [],
+    "drivingReferenceLinks": [],
+    "plannedRoadLegs": [],
+    "publicTransitAndRail": []
+  },
+  "days": [
+    {
+      "id": "day-1",
+      "day": 1,
+      "date": "2026-10-29",
+      "title": "抵达 Zurich · 市区晚餐",
+      "locations": [
+        "Zurich Airport",
+        "Aparthotel Adagio Zurich City Centre",
+        "Zurich"
+      ],
+      "schedule": [
+        {
+          "id": "d1-flight",
+          "time": "13:45",
+          "type": "flight",
+          "text": "KLM KL940：GLA → AMS；起飞 13:45。KL1925：AMS → ZRH；抵达 ZRH 18:25。各航段时间待确认。"
+        },
+        {
+          "id": "d1-arrival",
+          "time": "18:25",
+          "type": "transfer",
+          "text": "抵达 Zurich Airport（ZRH），前往市区住宿。",
+          "placeId": "zrh"
+        },
+        {
+          "id": "d1-checkin",
+          "time": "",
+          "type": "check-in",
+          "text": "入住 Aparthotel Adagio Zurich City Centre（第 1 夜）。",
+          "placeId": "adagio"
+        },
+        {
+          "id": "d1-dinner",
+          "time": "",
+          "type": "restaurant",
+          "text": "Zurich 市区晚餐；餐厅待定。",
+          "placeId": "zurich"
+        }
+      ],
+      "costReferences": [
+        {
+          "item": "往返机票",
+          "currency": "HKD",
+          "amount": 1852
+        },
+        {
+          "item": "住宿总价（两处）",
+          "currency": "HKD",
+          "amount": 2202.29
+        }
+      ]
+    },
+    {
+      "id": "day-2",
+      "day": 2,
+      "date": "2026-10-30",
+      "title": "Grindelwald · Jungfrau & Pfingstegg",
+      "locations": [
+        "Grindelwald",
+        "Jungfraujoch",
+        "Luftseilbahn Grindelwald-Pfingstegg",
+        "Eiger View Alpine Lodge"
+      ],
+      "schedule": [
+        {
+          "id": "d2-grindelwald",
+          "time": "",
+          "type": "transfer",
+          "text": "前往 Grindelwald；交通与出发时间待确认。",
+          "placeId": "grindelwald"
+        },
+        {
+          "id": "d2-jungfrau",
+          "time": "",
+          "type": "attraction",
+          "text": "计划前往 Jungfrau / Jungfraujoch；行程顺序与所需门票待确认。",
+          "placeId": "jungfraujoch"
+        },
+        {
+          "id": "d2-mountain-cart",
+          "time": "",
+          "type": "attraction",
+          "text": "Mountain Cart；具体地点与安排待确认。",
+          "placeId": "grindelwald"
+        },
+        {
+          "id": "d2-pfingstegg",
+          "time": "",
+          "type": "attraction",
+          "text": "前往 Luftseilbahn Grindelwald-Pfingstegg，计划体验滑道；具体顺序与门票待确认。",
+          "placeId": "pfingstegg"
+        },
+        {
+          "id": "d2-checkin",
+          "time": "",
+          "type": "check-in",
+          "text": "入住 Eiger View Alpine Lodge（第 2 夜）。",
+          "placeId": "eiger-view"
+        }
+      ]
+    },
+    {
+      "id": "day-3",
+      "day": 3,
+      "date": "2026-10-31",
+      "title": "Grindelwald · 爬山待定 · 返回 Zurich",
+      "locations": [
+        "Grindelwald",
+        "Aparthotel Adagio Zurich City Centre"
+      ],
+      "schedule": [
+        {
+          "id": "d3-hike",
+          "time": "",
+          "type": "hike",
+          "text": "爬山计划待确认：登山地点与路线未定。",
+          "placeId": "grindelwald"
+        },
+        {
+          "id": "d3-return-zurich",
+          "time": "",
+          "type": "transfer",
+          "text": "返回 Zurich；交通与出发时间待确认。",
+          "placeId": "zurich"
+        },
+        {
+          "id": "d3-checkin",
+          "time": "",
+          "type": "check-in",
+          "text": "入住 Aparthotel Adagio Zurich City Centre（第 3 夜）。",
+          "placeId": "adagio"
+        }
+      ]
+    },
+    {
+      "id": "day-4",
+      "day": 4,
+      "date": "2026-11-01",
+      "title": "Zurich 市区漫步 · 返回 Glasgow",
+      "locations": [
+        "Zurich Old Town",
+        "Zurich Airport"
+      ],
+      "schedule": [
+        {
+          "id": "d4-walk",
+          "time": "",
+          "type": "walk",
+          "text": "Zurich 市区散步；具体路线待定。",
+          "placeId": "zurich-old-town"
+        },
+        {
+          "id": "d4-return-flight",
+          "time": "19:10",
+          "type": "flight",
+          "text": "KLM KL1926：ZRH → AMS；起飞 19:10。KL945：AMS → GLA；抵达 GLA 22:10。各航段时间待确认。",
+          "placeId": "zrh"
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "zrh",
+      "name": "Zurich Airport (ZRH)",
+      "nameZh": "苏黎世机场",
+      "cityOrArea": "Zurich",
+      "geo": {
+        "lat": 47.4581,
+        "lng": 8.5555
+      },
+      "countryCode": "CH",
+      "navigation": {
+        "query": "Zurich Airport ZRH"
+      }
+    },
+    {
+      "id": "zurich",
+      "name": "Zurich",
+      "nameZh": "苏黎世市区",
+      "cityOrArea": "Zurich",
+      "geo": {
+        "lat": 47.3769,
+        "lng": 8.5417
+      },
+      "countryCode": "CH",
+      "navigation": {
+        "query": "Zurich, Switzerland"
+      }
+    },
+    {
+      "id": "adagio",
+      "name": "Aparthotel Adagio Zurich City Centre",
+      "cityOrArea": "Zurich",
+      "geo": {
+        "lat": 47.3827,
+        "lng": 8.5392
+      },
+      "countryCode": "CH",
+      "navigation": {
+        "query": "Aparthotel Adagio Zurich City Centre, Stampfenbachstrasse 60, Zurich"
+      }
+    },
+    {
+      "id": "grindelwald",
+      "name": "Grindelwald",
+      "nameZh": "格林德瓦",
+      "cityOrArea": "Grindelwald",
+      "geo": {
+        "lat": 46.6242,
+        "lng": 8.0414
+      },
+      "countryCode": "CH",
+      "navigation": {
+        "query": "Grindelwald, Switzerland"
+      }
+    },
+    {
+      "id": "eiger-view",
+      "name": "Eiger View Alpine Lodge",
+      "cityOrArea": "Grindelwald",
+      "geo": {
+        "lat": 46.6267,
+        "lng": 8.0358
+      },
+      "countryCode": "CH",
+      "navigation": {
+        "query": "Eiger View Alpine Lodge, Sonnenbergweg 20, Grindelwald"
+      }
+    },
+    {
+      "id": "jungfraujoch",
+      "name": "Jungfraujoch",
+      "nameZh": "少女峰",
+      "cityOrArea": "Jungfrau Region",
+      "geo": {
+        "lat": 46.5475,
+        "lng": 7.9851
+      },
+      "countryCode": "CH",
+      "navigation": {
+        "query": "Jungfraujoch, Switzerland"
+      }
+    },
+    {
+      "id": "pfingstegg",
+      "name": "Luftseilbahn Grindelwald-Pfingstegg",
+      "nameZh": "Grindelwald-Pfingstegg 缆车及滑道",
+      "cityOrArea": "Grindelwald",
+      "geo": {
+        "lat": 46.6172,
+        "lng": 8.0471
+      },
+      "countryCode": "CH",
+      "navigation": {
+        "query": "Luftseilbahn Grindelwald-Pfingstegg"
+      }
+    },
+    {
+      "id": "zurich-old-town",
+      "name": "Zurich Old Town",
+      "nameZh": "苏黎世老城",
+      "cityOrArea": "Zurich",
+      "geo": {
+        "lat": 47.3711,
+        "lng": 8.5436
+      },
+      "countryCode": "CH",
+      "navigation": {
+        "query": "Zurich Old Town Switzerland"
+      }
+    }
+  ],
+  "restaurants": [],
+  "bookingsAndTickets": [],
+  "ticketPlanning": {
+    "statusStorage": "local",
+    "statusStorageNote": "门票状态默认只保存在当前浏览器。",
+    "items": []
+  },
+  "preTrip": {
+    "packingItems": [
+      {
+        "id": "todo-youth-travel-pass",
+        "text": "购买青年 travel pass",
+        "completed": false
+      },
+      {
+        "id": "todo-passport",
+        "text": "带 passport",
+        "completed": false
+      },
+      {
+        "id": "todo-check-tickets",
+        "text": "确认需要购买的门票",
+        "completed": false
+      }
+    ],
+    "todoItems": [
+      {
+        "id": "todo-youth-travel-pass",
+        "text": "购买青年 travel pass",
+        "completed": false
+      },
+      {
+        "id": "todo-passport",
+        "text": "带 passport",
+        "completed": false
+      },
+      {
+        "id": "todo-check-tickets",
+        "text": "确认需要购买的门票",
+        "completed": false
+      }
+    ],
+    "preparationsExplicitlyMentioned": [
+      "购买青年 travel pass",
+      "带 passport",
+      "确认需要购买的门票"
+    ],
+    "missingNote": "青年 travel pass 的具体种类与需购买门票待确认。"
+  },
+  "mapLinks": {
+    "providedGoogleMapsLinks": [],
+    "note": "地点导航由现有模板按地点生成 Google Maps 搜索入口。",
+    "cityLevelNavigationDisabled": false,
+    "navigationPolicy": {
+      "noNavigationTypes": [
+        "flight",
+        "note",
+        "rest"
+      ],
+      "selfNavigationTypes": [
+        "drive",
+        "return",
+        "transfer",
+        "check-in",
+        "check-out",
+        "restaurant",
+        "attraction",
+        "walk",
+        "hike"
+      ]
+    },
+    "navigationPlaces": []
+  },
+  "issuesAndUncertainties": [
+    "按当前日期将 29 Oct–1 Nov 解析为 2026-10-29 至 2026-11-01。",
+    "航班为 KL940、KL1925、KL1926、KL945 经 AMS 转机；仅有整段起抵时间，分段时间待补充。",
+    "Day 2 Jungfrau/Jungfraujoch、Mountain Cart、Pfingstegg 的顺序及 Mountain Cart 具体地点待确认。",
+    "Day 3 爬山地点与路线待确认。",
+    "青年 travel pass 类型、需要购买的门票及餐厅待确认。"
+  ],
+  "map": {
+    "schemaVersion": "1.0-lite",
+    "mapMode": "template-auto",
+    "templateId": "auto",
+    "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+    "region": {
+      "id": "switzerland",
+      "label": "Switzerland",
+      "countryCode": "CH"
+    },
+    "defaultRegionId": "switzerland",
+    "places": [
+      {
+        "id": "zrh",
+        "countryCode": "CH",
+        "mapRegionId": "switzerland",
+        "geo": {
+          "lat": 47.4581,
+          "lng": 8.5555
+        }
+      },
+      {
+        "id": "zurich",
+        "countryCode": "CH",
+        "mapRegionId": "switzerland",
+        "geo": {
+          "lat": 47.3769,
+          "lng": 8.5417
+        }
+      },
+      {
+        "id": "adagio",
+        "countryCode": "CH",
+        "mapRegionId": "switzerland",
+        "geo": {
+          "lat": 47.3827,
+          "lng": 8.5392
+        }
+      },
+      {
+        "id": "grindelwald",
+        "countryCode": "CH",
+        "mapRegionId": "switzerland",
+        "geo": {
+          "lat": 46.6242,
+          "lng": 8.0414
+        }
+      },
+      {
+        "id": "eiger-view",
+        "countryCode": "CH",
+        "mapRegionId": "switzerland",
+        "geo": {
+          "lat": 46.6267,
+          "lng": 8.0358
+        }
+      },
+      {
+        "id": "jungfraujoch",
+        "countryCode": "CH",
+        "mapRegionId": "switzerland",
+        "geo": {
+          "lat": 46.5475,
+          "lng": 7.9851
+        }
+      },
+      {
+        "id": "pfingstegg",
+        "countryCode": "CH",
+        "mapRegionId": "switzerland",
+        "geo": {
+          "lat": 46.6172,
+          "lng": 8.0471
+        }
+      },
+      {
+        "id": "zurich-old-town",
+        "countryCode": "CH",
+        "mapRegionId": "switzerland",
+        "geo": {
+          "lat": 47.3711,
+          "lng": 8.5436
+        }
+      }
+    ],
+    "routes": [
+      {
+        "day": 1,
+        "placeIds": [
+          "zrh",
+          "adagio",
+          "zurich"
+        ]
+      },
+      {
+        "day": 2,
+        "placeIds": [
+          "grindelwald",
+          "jungfraujoch",
+          "pfingstegg",
+          "eiger-view"
+        ]
+      },
+      {
+        "day": 3,
+        "placeIds": [
+          "eiger-view",
+          "grindelwald",
+          "zurich",
+          "adagio"
+        ]
+      },
+      {
+        "day": 4,
+        "placeIds": [
+          "adagio",
+          "zurich-old-town",
+          "zrh"
+        ]
+      }
+    ],
+    "dailyRoutes": [
+      {
+        "day": 1,
+        "placeIds": [
+          "zrh",
+          "adagio",
+          "zurich"
+        ],
+        "scheduleItems": [
+          "d1-arrival",
+          "d1-checkin",
+          "d1-dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "placeIds": [
+          "grindelwald",
+          "jungfraujoch",
+          "pfingstegg",
+          "eiger-view"
+        ],
+        "scheduleItems": [
+          "d2-grindelwald",
+          "d2-jungfrau",
+          "d2-pfingstegg",
+          "d2-checkin"
+        ]
+      },
+      {
+        "day": 3,
+        "placeIds": [
+          "eiger-view",
+          "grindelwald",
+          "zurich",
+          "adagio"
+        ],
+        "scheduleItems": [
+          "d3-hike",
+          "d3-return-zurich",
+          "d3-checkin"
+        ]
+      },
+      {
+        "day": 4,
+        "placeIds": [
+          "adagio",
+          "zurich-old-town",
+          "zrh"
+        ],
+        "scheduleItems": [
+          "d4-walk",
+          "d4-return-flight"
+        ]
+      }
+    ]
+  },
+  "routeMap": {
+    "defaultRegionId": "switzerland",
+    "regions": [
+      {
+        "id": "switzerland",
+        "label": "Switzerland",
+        "countryCode": "CH",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "urban-radial",
+        "mapModeReason": "dense-place-cluster",
+        "mapModeMetrics": {
+          "placeCount": 8,
+          "geoPlaceCount": 8,
+          "widthKm": 43.18,
+          "heightKm": 101.08,
+          "spanKm": 110.1,
+          "averageNearestKm": 2.68,
+          "components": 1,
+          "largestLegKm": 91.89,
+          "jumpRatio": 10.85
+        },
+        "days": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "relative-schematic",
+          "bounds": null
+        },
+        "baseImage": "assets/maps/templates/template-04-urban.webp",
+        "title": "Switzerland · 旅行路线",
+        "ariaLabel": "Switzerland模板化旅行路线示意图，共4天",
+        "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "heading": {
+          "text": "Switzerland",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 1,
+            "color": "#397dc1",
+            "placeIds": [
+              "zrh",
+              "adagio",
+              "zurich"
+            ],
+            "paths": [
+              "M982.9 199.5 C966.6 230.4 943.3 254.5 914.22 270.23 C913.9 305.1 923.0 337.2 941.03 364.83"
+            ],
+            "overviewPaths": [
+              "M982.9 199.5 C966.6 230.4 943.3 254.5 914.22 270.23 C913.9 305.1 923.0 337.2 941.03 364.83"
+            ]
+          },
+          {
+            "day": 2,
+            "color": "#e77e22",
+            "placeIds": [
+              "grindelwald",
+              "jungfraujoch",
+              "pfingstegg",
+              "eiger-view"
+            ],
+            "paths": [
+              "M826.58 812.04 C784.8 806.9 745.0 813.6 709.42 831.51 C718.6 797.6 736.2 768.8 761.24 746.91 C734.0 725.8 703.2 713.8 670.74 711.49"
+            ],
+            "overviewPaths": [
+              "M826.58 812.04 C784.8 806.9 745.0 813.6 709.42 831.51 C718.6 797.6 736.2 768.8 761.24 746.91 C734.0 725.8 703.2 713.8 670.74 711.49"
+            ]
+          },
+          {
+            "day": 3,
+            "color": "#618344",
+            "placeIds": [
+              "eiger-view",
+              "grindelwald",
+              "zurich",
+              "adagio"
+            ],
+            "paths": [
+              "M670.74 711.49 C733.8 730.1 786.8 764.3 826.58 812.04 C894.6 667.4 933.5 515.4 941.03 364.83 C922.5 335.3 913.3 303.2 914.22 270.23"
+            ],
+            "overviewPaths": [
+              "M670.74 711.49 C733.8 730.1 786.8 764.3 826.58 812.04 C894.6 667.4 933.5 515.4 941.03 364.83 C922.5 335.3 913.3 303.2 914.22 270.23"
+            ]
+          },
+          {
+            "day": 4,
+            "color": "#209aaa",
+            "placeIds": [
+              "adagio",
+              "zurich-old-town",
+              "zrh"
+            ],
+            "paths": [
+              "M914.22 270.23 C943.6 287.9 975.4 296.2 1007.72 294.68 C989.8 264.8 981.3 232.4 982.9 199.5"
+            ],
+            "overviewPaths": [
+              "M914.22 270.23 C943.6 287.9 975.4 296.2 1007.72 294.68 C989.8 264.8 981.3 232.4 982.9 199.5"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "zrh",
+            "x": 982.9,
+            "y": 199.5,
+            "color": "#397dc1",
+            "tx": 1014.9,
+            "ty": 167.5,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "zrh"
+            ],
+            "query": "zrh Switzerland",
+            "geo": {
+              "lat": 47.4581,
+              "lng": 8.5555
+            },
+            "days": [
+              1,
+              4
+            ]
+          },
+          {
+            "id": "zurich",
+            "x": 941.03,
+            "y": 364.83,
+            "color": "#397dc1",
+            "tx": 909.03,
+            "ty": 332.83,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "zurich"
+            ],
+            "query": "zurich Switzerland",
+            "geo": {
+              "lat": 47.3769,
+              "lng": 8.5417
+            },
+            "days": [
+              1,
+              3
+            ]
+          },
+          {
+            "id": "adagio",
+            "x": 914.22,
+            "y": 270.23,
+            "color": "#397dc1",
+            "tx": 992.22,
+            "ty": 346.23,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "adagio"
+            ],
+            "query": "adagio Switzerland",
+            "geo": {
+              "lat": 47.3827,
+              "lng": 8.5392
+            },
+            "days": [
+              1,
+              3,
+              4
+            ]
+          },
+          {
+            "id": "grindelwald",
+            "x": 826.58,
+            "y": 812.04,
+            "color": "#e77e22",
+            "tx": 748.58,
+            "ty": 888.04,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "grindelwald"
+            ],
+            "query": "grindelwald Switzerland",
+            "geo": {
+              "lat": 46.6242,
+              "lng": 8.0414
+            },
+            "days": [
+              2,
+              3
+            ]
+          },
+          {
+            "id": "eiger-view",
+            "x": 670.74,
+            "y": 711.49,
+            "color": "#e77e22",
+            "tx": 808.74,
+            "ty": 623.49,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "eiger-view"
+            ],
+            "query": "eiger-view Switzerland",
+            "geo": {
+              "lat": 46.6267,
+              "lng": 8.0358
+            },
+            "days": [
+              2,
+              3
+            ]
+          },
+          {
+            "id": "jungfraujoch",
+            "x": 709.42,
+            "y": 831.51,
+            "color": "#e77e22",
+            "tx": 847.42,
+            "ty": 933.51,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "jungfraujoch"
+            ],
+            "query": "jungfraujoch Switzerland",
+            "geo": {
+              "lat": 46.5475,
+              "lng": 7.9851
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "pfingstegg",
+            "x": 761.24,
+            "y": 746.91,
+            "color": "#e77e22",
+            "tx": 793.24,
+            "ty": 714.91,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "pfingstegg"
+            ],
+            "query": "pfingstegg Switzerland",
+            "geo": {
+              "lat": 46.6172,
+              "lng": 8.0471
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "zurich-old-town",
+            "x": 1007.72,
+            "y": 294.68,
+            "color": "#209aaa",
+            "tx": 1085.72,
+            "ty": 232.68,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "zurich-old-town"
+            ],
+            "query": "zurich-old-town Switzerland",
+            "geo": {
+              "lat": 47.3711,
+              "lng": 8.5436
+            },
+            "days": [
+              4
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "zrh",
+          "zurich",
+          "adagio",
+          "grindelwald",
+          "eiger-view",
+          "jungfraujoch",
+          "pfingstegg",
+          "zurich-old-town"
+        ],
+        "dailyLayouts": {
+          "1": {
+            "places": [
+              "zrh",
+              "adagio",
+              "zurich"
+            ],
+            "labels": {
+              "zrh": {
+                "x": 1014.9,
+                "y": 167.5,
+                "anchor": "start"
+              },
+              "adagio": {
+                "x": 992.22,
+                "y": 346.23,
+                "anchor": "start"
+              },
+              "zurich": {
+                "x": 909.03,
+                "y": 332.83,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": "d1-arrival",
+                "x": 948.56,
+                "y": 234.87
+              },
+              {
+                "items": "d1-checkin",
+                "x": 927.63,
+                "y": 317.53
+              }
+            ]
+          },
+          "2": {
+            "places": [
+              "grindelwald",
+              "jungfraujoch",
+              "pfingstegg",
+              "eiger-view"
+            ],
+            "labels": {
+              "grindelwald": {
+                "x": 748.58,
+                "y": 888.04,
+                "anchor": "end"
+              },
+              "jungfraujoch": {
+                "x": 847.42,
+                "y": 933.51,
+                "anchor": "start"
+              },
+              "pfingstegg": {
+                "x": 793.24,
+                "y": 714.91,
+                "anchor": "start"
+              },
+              "eiger-view": {
+                "x": 808.74,
+                "y": 623.49,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": "d2-grindelwald",
+                "x": 768,
+                "y": 821.77
+              },
+              {
+                "items": "d2-jungfrau",
+                "x": 735.33,
+                "y": 789.21
+              },
+              {
+                "items": "d2-pfingstegg",
+                "x": 715.99,
+                "y": 729.2
+              }
+            ]
+          },
+          "3": {
+            "places": [
+              "eiger-view",
+              "grindelwald",
+              "zurich",
+              "adagio"
+            ],
+            "labels": {
+              "eiger-view": {
+                "x": 808.74,
+                "y": 623.49,
+                "anchor": "start"
+              },
+              "grindelwald": {
+                "x": 748.58,
+                "y": 888.04,
+                "anchor": "end"
+              },
+              "zurich": {
+                "x": 909.03,
+                "y": 332.83,
+                "anchor": "end"
+              },
+              "adagio": {
+                "x": 992.22,
+                "y": 346.23,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": "d3-hike",
+                "x": 748.66,
+                "y": 761.76
+              },
+              {
+                "items": "d3-return-zurich",
+                "x": 883.81,
+                "y": 588.43
+              },
+              {
+                "items": "d3-checkin",
+                "x": 927.63,
+                "y": 317.53
+              }
+            ]
+          },
+          "4": {
+            "places": [
+              "adagio",
+              "zurich-old-town",
+              "zrh"
+            ],
+            "labels": {
+              "adagio": {
+                "x": 992.22,
+                "y": 346.23,
+                "anchor": "start"
+              },
+              "zurich-old-town": {
+                "x": 1085.72,
+                "y": 232.68,
+                "anchor": "start"
+              },
+              "zrh": {
+                "x": 1014.9,
+                "y": 167.5,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": "d4-walk",
+                "x": 960.97,
+                "y": 282.46
+              },
+              {
+                "items": "d4-return-flight",
+                "x": 995.31,
+                "y": 247.09
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
